@@ -23,4 +23,9 @@ I love experimenting with
 
  ## Screenshots
 
+<img width="1545" height="877" alt="1" src="https://github.com/user-attachments/assets/4f1ae19d-ecbf-4e1e-802c-ae842ec94786" />
+<img width="1541" height="879" alt="2" src="https://github.com/user-attachments/assets/0e0161bd-be5f-4bd1-8fd1-cf1fabe00590" />
+<img width="1541" height="871" alt="3" src="https://github.com/user-attachments/assets/af524916-ebd3-40d8-a521-e8932cbe41d8" />
+<img width="1556" height="869" alt="4" src="https://github.com/user-attachments/assets/34321ef8-09d2-46f4-903f-5fd433b0a16e" />
+
 
