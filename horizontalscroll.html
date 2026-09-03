@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="horizontalscroll.css">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">        
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+			const options={
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.5
+			};
+            const sections = document.querySelectorAll('section')
+            const observer = new IntersectionObserver(
+                (entries, observe) => {
+                    
+                entries.forEach(entry => {
+                    let sectionClassName=entry.target.id;
+                    if (entry.isIntersecting){
+                        document.querySelector('.'+sectionClassName).style.transform = 'scale(1.3)';
+                    }else{
+                        document.querySelector('.'+sectionClassName).style.transform = 'scale(1)';
+
+					}
+                });
+            }, options);
+            sections.forEach(section => {
+                observer.observe(section);
+            })
+            
+        })
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <ul id="navbarlist">
+                    <li class="navbarItem home "><a href="#home">home</a></li>
+                    <li class="navbarItem about"><a href="#about">about</a></li>
+                    <li class="navbarItem products"><a href="#products">products</a></li>
+                    <li class="navbarItem services"><a href="#services">services</a></li>
+                    <li class="navbarItem contactus"><a href="#contactus">contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="outer-wrapper">
+                
+                <div class="inner-wrapper">
+                    <svg  id="svgtop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" width="100%" height="50vh" preserveAspectRatio="none">
+                        <path fill="#fff" fill-opacity="1" d="M0,288L40,266.7C80,245,160,203,240,208C320,213,400,267,480,288C560,309,640,299,720,272C800,245,880,203,960,192C1040,181,1120,203,1200,197.3C1280,192,1360,160,1400,144L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+                        </path>
+                    </svg>
+                    <svg id="svgbottom" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320" width="100%" height="100vh" preserveAspectRatio="none">
+                        <path fill="#fff" fill-opacity="1" d="M0,288L40,266.7C80,245,160,203,240,208C320,213,400,267,480,288C560,309,640,299,720,272C800,245,880,203,960,192C1040,181,1120,203,1200,197.3C1280,192,1360,160,1400,144L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                        </path> 
+                        <text>
+                            <textpath id="phonenumber" alignment-baseine="top" xlink:href="#svgbottom">0-999-999-9999</textpath>
+                        </text>
+                    </svg>
+                    
+                    <section class="sections" id="home">
+                        <h1 id="homeheader">RANDOM <br> TEXT</h1>
+                    </section>
+
+                    <section class="sections" id="about">
+                        <h1 id="aboutheader">YOU CAN LEARN <span id="aboutuspart">ABOUT US</span> HERE</h1>
+                    </section>
+
+                    <section class="sections" id="products">
+                        <div class="productItems" id="product1"> </div>
+                        <div class="productItems" id="product2"> </div>
+                        <div class="productItems" id="product3"> </div>
+                    </section>
+
+                    <section class="sections" id="services">
+                        
+                    </section>
+
+                    <section class="sections" id="contactus">
+                        <div id="contactUsGridContainer">
+                            <div id="contactUsText">
+                                <h1 id="contactUsHeader1">Contact</h1> <h1 id="contactUsHeader2">Us</h1>
+                            </div>
+                            <form id="contactUsForm">
+                                <div id="contactUsFormTop">
+                                    <div>
+                                        <label for="firstName" class="contactUsLabels">First Name</label>
+                                        <input type="text" class="name">
+                                    </div>
+                                    <div>
+                                        <label for="lastName" class="contactUsLabels">Last Name</label>
+                                        <input type="text" class="name">
+                                    </div>
+                                </div>
+                                <div id="contactUsFormBottom">
+                                        <label for="userMessage" class="contactUsLabels" >Your Message</label>
+                                        <textarea type="text" id="userMessage" placeholder="start typing here..."></textarea>
+                                        <button type="submit" id="contactUsSubmitButton">send</button>
+                                </div>
+                            </form>
+                            <div id="contactUsIconContainer">
+                                <img id="contactUsSendIcon" src="/images/send%20(3).png">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>  
